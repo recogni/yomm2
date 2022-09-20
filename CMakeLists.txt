@@ -14,8 +14,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Find Boost dependency
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
-include(find_or_download_package)
-find_or_download_package(Boost INSTALL_WITH_YOMM ${CMAKE_CURRENT_LIST_DIR}/cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/cmake/find_or_download_package)
+find_or_download_package(Boost INSTALL_WITH_YOMM DL_SCRIPT_DIR ${CMAKE_CURRENT_LIST_DIR}/cmake)
 message(STATUS "Using Boost libraries from ${Boost_INCLUDE_DIRS}")
 
 if(CMAKE_COMPILER_IS_GNUCXX OR "${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
