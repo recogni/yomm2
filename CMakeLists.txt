@@ -54,7 +54,7 @@ if(${YOMM2_ENABLE_TESTS})
   add_subdirectory(tests)
 endif()
 
-option(YOMM2_ENABLE_EXAMPLES "Set to ON to build examples" ON)
+option(YOMM2_ENABLE_EXAMPLES "Set to ON to build examples" OFF)
 if(${YOMM2_ENABLE_EXAMPLES})
   message(STATUS "Examples enabled")
   add_subdirectory(examples)
